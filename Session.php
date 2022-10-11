@@ -8,4 +8,3 @@ $row = mysqli_fetch_array($result);
 $_SESSION['role'] = $row['role'];
 $_SESSION['firstname'] = $row['firstname'];
 $_SESSION['id'] = $row['id'];
-?>
