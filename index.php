@@ -13,6 +13,8 @@ require "session.php";
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-</body>
+    <a href="login.php">login</a>
+    <a href="register.php">register</a>
+    <a href=""></a>
+    </body>
 </html>

@@ -9,6 +9,7 @@
 </head>
 <body>
     <form action="" method="post">
+        <input type="email" name="email" id="email" placeholder="placeholder@email.com">
         <input type="password" name="password" id="password" placeholder="">
         <button type="submit">Login</button>
     </form>
