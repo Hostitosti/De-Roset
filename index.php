@@ -11,12 +11,17 @@ include "session.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     
 
     <div class="grid-container">
-        <div class="grid-item grid-item1">a</div>
+        <div class="grid-item grid-item1">
+            <div class="logo">
+                <img src="" alt="logo">
+            </div>
+        </div>
         <div class="grid-item grid-item2">
             <a href="#">Over ons</a>
             <a href="#">Bestellen</a>
@@ -34,5 +39,6 @@ include "session.php";
         <div class="grid-item grid-item5">e</div>
         <div class="grid-item grid-item6">f</div>
     </div>
+    <script src="https://kit.fontawesome.com/05147bc226.js" crossorigin="anonymous"></script>
     </body>
 </html>

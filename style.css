@@ -6,7 +6,8 @@ html {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 6rem 6rem;
     grid-auto-rows: minmax(12rem, auto);
-    grid-gap: 20px;
+    grid-row-gap: 20px;
+    grid-column-gap: 50px;
     grid-template-areas:
     "a b b b"
     "a d d d"
@@ -18,8 +19,9 @@ html {
 }
 
 .grid-item {
-    background-color: gray;
-
+    border-color: gray;
+    border-style: solid;
+    
 }
 .grid-item1{
     grid-area: a;
@@ -29,6 +31,11 @@ html {
     grid-area: b;
     align-items: center;
     justify-content: space-between;
+    padding: 10px;
+}
+.grid-item2 a{
+    text-decoration: none;
+    color: black;
 }
 
 .grid-item3{
