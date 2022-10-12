@@ -1,10 +1,12 @@
 .grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 200px;
     grid-auto-rows: minmax(200px, auto);
     grid-gap: 25px;
     grid-template-areas:
     "a b b b"
+    "a d d d"
     "c d d d"
     "e d d d"
     "f f f f";
@@ -21,12 +23,14 @@
 }
 .grid-item2{
     grid-area: b;
+    
 }
 .grid-item3{
     grid-area: c;
 }
 .grid-item4{
     grid-area: d;
+    
 }
 .grid-item5{
     grid-area: e;
