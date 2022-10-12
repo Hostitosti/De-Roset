@@ -18,11 +18,16 @@ include "session.php";
     <div class="grid-container">
         <div class="grid-item grid-item1">a</div>
         <div class="grid-item grid-item2">
-            <a href="login.php">login</a>
-            <a href="register.php">register</a>
-            <a href="logout.php">logout</a>
+            <a href="#">Over ons</a>
+            <a href="#">Bestellen</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+            <a href="#">Winkelmandje</a>
         <?php if(isset($_SESSION['id'])){?>
             <a href="edit_user.php?id=<?php echo $_SESSION['id'] ?>"><?php echo $_SESSION['firstname']; ?></a>
+            <a href="logout.php">logout</a>
+        <?php } else { ?>
+            <a href="login.php">login</a>
         <?php } ?></div>
         <div class="grid-item grid-item3">c</div>
         <div class="grid-item grid-item4">d</div>
