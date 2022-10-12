@@ -16,6 +16,6 @@ include "session.php";
     <a href="login.php">login</a>
     <a href="register.php">register</a>
     <a href="logout.php">logout</a>
-    <a href=""></a>
+    <a href="edit_user.php"></a>
     </body>
 </html>
