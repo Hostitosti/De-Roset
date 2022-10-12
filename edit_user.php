@@ -54,5 +54,6 @@ if ($conn->query($sql) === TRUE) {
         <input type="hidden" name="role" id="role" value="<?php echo $user['role'] ?>">
         <button type="submit" name="submit">Edit</button>
     </form>
+    <a href="delete_user.php?id=<?php echo $_SESSION['id']?>">Delete user</a>
 </body>
 </html>

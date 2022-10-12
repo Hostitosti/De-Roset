@@ -18,6 +18,7 @@ include "session.php";
     <a href="logout.php">logout</a>
     <?php if(isset($_SESSION['id'])){?>
         <a href="edit_user.php?id=<?php echo $_SESSION['id'] ?>"><?php echo $_SESSION['firstname']; ?></a>
+        
     <?php } ?>
     </body>
 </html>
