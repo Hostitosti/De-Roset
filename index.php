@@ -18,7 +18,15 @@ include "session.php";
     <a href="logout.php">logout</a>
     <?php if(isset($_SESSION['id'])){?>
         <a href="edit_user.php?id=<?php echo $_SESSION['id'] ?>"><?php echo $_SESSION['firstname']; ?></a>
-        
     <?php } ?>
+
+    <div class="grid-container">
+        <div class="grid-item grid-item1"></div>
+        <div class="grid-item grid-item2"></div>
+        <div class="grid-item grid-item3"></div>
+        <div class="grid-item grid-item4"></div>
+        <div class="grid-item grid-item5"></div>
+        <div class="grid-item grid-item6"></div>
+    </div>
     </body>
 </html>
