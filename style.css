@@ -1,9 +1,12 @@
+html {
+    font-family: sans-serif;
+}
 .grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 100px 200px;
-    grid-auto-rows: minmax(200px, auto);
-    grid-gap: 25px;
+    grid-template-rows: 6rem 6rem;
+    grid-auto-rows: minmax(12rem, auto);
+    grid-gap: 20px;
     grid-template-areas:
     "a b b b"
     "a d d d"
@@ -22,9 +25,12 @@
     grid-area: a;
 }
 .grid-item2{
+    display: flex;
     grid-area: b;
-    
+    align-items: center;
+    justify-content: space-between;
 }
+
 .grid-item3{
     grid-area: c;
 }
