@@ -51,6 +51,7 @@ html {
 }
 .grid-item3 img{
     border-radius: 100px;
+    background-color: gray;
 }
 .grid-item4{
     grid-area: d;
@@ -58,6 +59,13 @@ html {
 }
 .grid-item5{
     grid-area: e;
+    align-items: center;
+    flex-direction: column;
+}
+.grid-item5 img{
+    border-radius: 100px;
+    background-color: gray;
+    margin-bottom: 2rem;
 }
 .grid-item6{
     grid-area: f;

@@ -1,6 +1,8 @@
 <?php 
 require "connection.php";
 include "session.php";
+
+$sql = "SELECT * FROM products";
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +23,7 @@ include "session.php";
             <div class="logo">
                 <img src="images/ijsjeTest.jpg" alt="logo" height="150px" width="150px">
             </div>
-            <p>De Roset</p>
+            <h2>De Roset</h2>
         </div>
         <div class="grid-item grid-item2">
             <a href="#">Over ons</a>
@@ -36,12 +38,17 @@ include "session.php";
             <a href="login.php">login</a>
         <?php } ?></div>
         <div class="grid-item grid-item3">
-            <p>Smaak van de dag</p>
+            <h2>Smaak van de dag</h2>
             <img src="images/ijsjeTest.jpg" alt="ijsje" width="150px" height="150px">
             <button>Bestel</button>
         </div>
         <div class="grid-item grid-item4">d</div>
-        <div class="grid-item grid-item5">e</div>
+        <div class="grid-item grid-item5">
+            <h2>Smaak van de dag</h2>
+            <img src="images/ijsjeTest.jpg" alt="ijsje" width="150px" height="150px">
+            <img src="images/ijsjeTest.jpg" alt="ijsje" width="150px" height="150px">
+            <img src="images/ijsjeTest.jpg" alt="ijsje" width="150px" height="150px">
+        </div>
         <div class="grid-item grid-item6">f</div>
     </div>
     <script src="https://kit.fontawesome.com/05147bc226.js" crossorigin="anonymous"></script>
