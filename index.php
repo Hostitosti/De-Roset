@@ -21,12 +21,12 @@ include "session.php";
     <?php } ?>
 
     <div class="grid-container">
-        <div class="grid-item grid-item1"></div>
-        <div class="grid-item grid-item2"></div>
-        <div class="grid-item grid-item3"></div>
-        <div class="grid-item grid-item4"></div>
-        <div class="grid-item grid-item5"></div>
-        <div class="grid-item grid-item6"></div>
+        <div class="grid-item grid-item1">a</div>
+        <div class="grid-item grid-item2">b</div>
+        <div class="grid-item grid-item3">c</div>
+        <div class="grid-item grid-item4">d</div>
+        <div class="grid-item grid-item5">e</div>
+        <div class="grid-item grid-item6">f</div>
     </div>
     </body>
 </html>
