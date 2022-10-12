@@ -16,6 +16,8 @@ include "session.php";
     <a href="login.php">login</a>
     <a href="register.php">register</a>
     <a href="logout.php">logout</a>
-    <a href="edit_user.php"></a>
+    <?php if(isset($_SESSION['id'])){?>
+        <a href="edit_user.php?id=<?php echo $_SESSION['id'] ?>"><?php echo $_SESSION['firstname']; ?></a>
+    <?php } ?>
     </body>
 </html>
