@@ -13,29 +13,26 @@ include "session.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
     
 
     <div class="grid-container">
         <div class="grid-item grid-item1">
-            <div class="logo">
-                <img src="images/ijsjeTest.jpg" alt="logo" height="150px" width="150px">
-            </div>
+                <img src="images/ijs.png" alt="logo" height="150px" width="100px">
             <h2>De Roset</h2>
         </div>
         <div class="grid-item grid-item2">
             <a href="#">Over ons</a>
-            <a href="#">Bestellen</a>
-            <a href="#">Blog</a>
-            <a href="#">Contact</a>
-            <a href="#">Winkelmandje</a>
+            <a href="#">Bestellen <i class="fa-solid fa-store"></i></a>
+            <a href="#">Blog <i class="fa-solid fa-square-rss"></i></a>
+            <a href="#">Contact <i class="fa-solid fa-phone"></i></a>
+            <a href="#">Winkelmandje <i class="fa-solid fa-cart-shopping"></i></a>
         <?php if(isset($_SESSION['id'])){?>
-            <a href="edit_user.php?id=<?php echo $_SESSION['id'] ?>"><?php echo $_SESSION['firstname']; ?></a>
-            <a href="logout.php">logout</a>
+            <a href="edit_user.php?id=<?php echo $_SESSION['id'] ?>"><?php echo $_SESSION['firstname']; ?> <i class="fa-solid fa-person"></i></a>
+            <a href="logout.php">logout <i class="fa-solid fa-circle-xmark"></i></a>
         <?php } else { ?>
-            <a href="login.php">login</a>
+            <a href="login.php">login <i class="fa-solid fa-circle-plus"></i></a>
         <?php } ?></div>
 
         <div class="grid-item grid-item3">
@@ -50,7 +47,7 @@ include "session.php";
             }
             mysqli_close($conn);?>
 
-            <button>Bestel</button>
+            <a href="#">Bestel</a>
         </div>
         <div class="grid-item grid-item4">d</div>
         <div class="grid-item grid-item5">
