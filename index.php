@@ -2,7 +2,7 @@
 require "connection.php";
 include "session.php";
 
-$sql = "SELECT * FROM products";
+
 ?>
 
 <!DOCTYPE html>
@@ -37,17 +37,27 @@ $sql = "SELECT * FROM products";
         <?php } else { ?>
             <a href="login.php">login</a>
         <?php } ?></div>
+
         <div class="grid-item grid-item3">
             <h2>Smaak van de dag</h2>
-            <img src="images/ijsjeTest.jpg" alt="ijsje" width="150px" height="150px">
+
+            <?php
+            $sql = "SELECT image_link FROM products ORDER BY ID LIMIT 1";
+            if ( $result = mysqli_query($conn,$sql) ) {
+            $product = mysqli_fetch_assoc($result); ?>
+            <img src="images/<?php echo $product['image_link']; ?>" alt="ijsje" width="150px" height="150px">
+            <?php mysqli_free_result($result);
+            }
+            mysqli_close($conn);?>
+
             <button>Bestel</button>
         </div>
         <div class="grid-item grid-item4">d</div>
         <div class="grid-item grid-item5">
             <h2>Smaak van de dag</h2>
-            <img src="images/ijsjeTest.jpg" alt="ijsje" width="150px" height="150px">
-            <img src="images/ijsjeTest.jpg" alt="ijsje" width="150px" height="150px">
-            <img src="images/ijsjeTest.jpg" alt="ijsje" width="150px" height="150px">
+            <img src="images/ijsjeTest.jpg" alt="" width="150px" height="150px">
+            <img src="images/ijsjeTest.jpg" alt="" width="150px" height="150px">
+            <img src="images/ijsjeTest.jpg" alt="" width="150px" height="150px">
         </div>
         <div class="grid-item grid-item6">f</div>
     </div>
