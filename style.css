@@ -1,37 +1,43 @@
 html {
     font-family: sans-serif;
 }
+
 .grid-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 6rem 6rem;
     grid-auto-rows: minmax(12rem, auto);
     grid-row-gap: 20px;
     grid-column-gap: 50px;
     grid-template-areas:
-    "a b b b"
-    "a d d d"
-    "c d d d"
-    "e d d d"
-    "f f f f";
-    margin-left: 2rem;
-    margin-right: 2rem;
+    "a b b b b"
+    "a d d d d"
+    "c d d d d"
+    "e d d d d"
+    "e d d d d"
+    "e d d d d"
+    "f f f f f";
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
 
 .grid-item {
-    border-color: gray;
-    border-style: solid;
-    
+    background-color: lightgray;
+    display: flex;
+    padding: 10px;
 }
 .grid-item1{
     grid-area: a;
+    align-items: center;
+    flex-direction: column;
+    
+    
 }
 .grid-item2{
-    display: flex;
     grid-area: b;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    
 }
 .grid-item2 a{
     text-decoration: none;
@@ -40,6 +46,11 @@ html {
 
 .grid-item3{
     grid-area: c;
+    align-items: center;
+    flex-direction: column;
+}
+.grid-item3 img{
+    border-radius: 100px;
 }
 .grid-item4{
     grid-area: d;
@@ -50,4 +61,5 @@ html {
 }
 .grid-item6{
     grid-area: f;
+    
 }

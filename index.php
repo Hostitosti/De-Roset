@@ -19,8 +19,9 @@ include "session.php";
     <div class="grid-container">
         <div class="grid-item grid-item1">
             <div class="logo">
-                <img src="" alt="logo">
+                <img src="images/ijsjeTest.jpg" alt="logo" height="150px" width="150px">
             </div>
+            <p>De Roset</p>
         </div>
         <div class="grid-item grid-item2">
             <a href="#">Over ons</a>
@@ -34,7 +35,11 @@ include "session.php";
         <?php } else { ?>
             <a href="login.php">login</a>
         <?php } ?></div>
-        <div class="grid-item grid-item3">c</div>
+        <div class="grid-item grid-item3">
+            <p>Smaak van de dag</p>
+            <img src="images/ijsjeTest.jpg" alt="ijsje" width="150px" height="150px">
+            <button>Bestel</button>
+        </div>
         <div class="grid-item grid-item4">d</div>
         <div class="grid-item grid-item5">e</div>
         <div class="grid-item grid-item6">f</div>
