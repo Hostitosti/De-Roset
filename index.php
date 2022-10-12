@@ -1,6 +1,6 @@
 <?php 
 require "connection.php";
-require "session.php";
+include "session.php";
 ?>
 
 <!DOCTYPE html>
@@ -16,5 +16,6 @@ require "session.php";
     <a href="login.php">login</a>
     <a href="register.php">register</a>
     <a href="logout.php">logout</a>
+    <a href=""></a>
     </body>
 </html>
