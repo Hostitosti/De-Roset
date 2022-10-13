@@ -21,10 +21,10 @@ include "session.php";
             <h2>De Roset</h2>
         </div>
         <div class="grid-item grid-item2">
-            <a href="#">Over ons</a>
-                <a href="#">Bestellen <i class="fa-solid fa-store"></i></a>
-                    <a href="#">Blog <i class="fa-solid fa-square-rss"></i></a>
-                        <a href="#">Contact <i class="fa-solid fa-phone"></i></a>
+            <a href="index.php">Over ons</a>
+                <a href="bestellen.php">Bestellen <i class="fa-solid fa-store"></i></a>
+                    <a href="blog.php">Blog <i class="fa-solid fa-square-rss"></i></a>
+                        <a href="contact.php">Contact <i class="fa-solid fa-phone"></i></a>
                             <a href="#">Winkelmandje <i class="fa-solid fa-cart-shopping"></i></a>
                         <?php if(isset($_SESSION['id'])){?>
                             <a href="edit_user.php?id=<?php echo $_SESSION['id'] ?>"><?php echo $_SESSION['firstname']; ?> <i class="fa-solid fa-person"></i></a>
