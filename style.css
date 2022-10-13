@@ -135,14 +135,13 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 6rem;
-    grid-auto-rows: minmax(12rem, auto);
+    grid-auto-rows: minmax(12rem, 25rem);
     grid-row-gap: 20px;
     grid-column-gap: 20px;
     grid-template-areas:
     "a a"
     "b c"
-    "d d"
-    "e f";
+    "d d";
     margin-left: 5rem;
     margin-right: 5rem;
     width: 100%;
@@ -150,7 +149,7 @@ body{
 }
 
 .content-grid-item {
-
+    
 }
 .content-grid-item img{
     max-width:100%;
