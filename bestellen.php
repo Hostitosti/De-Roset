@@ -47,9 +47,22 @@ include "session.php";
         <h1>Menu</h1>
         <div class="grid-item grid-item4">
             <div class="orderpage-container">
-                <div class="orderpage-item orderpage-item1">
-                    <a href=""><img src="images/vanille-ijs.jpg" alt=""></a>
-                </div>
+                
+                <?php 
+                    $sql3 = "SELECT * FROM products";
+                if ( $result = mysqli_query($conn,$sql3) )
+                {
+                    while ($row=mysqli_fetch_assoc($result))
+                    { ?>
+                    <div class="orderpage-item orderpage-item1">
+                        <a href=""><img src="images/<?php echo $row['image_link']; ?>" alt="" width="" height=""></a>
+                        <h4><?php echo $row['name']; ?></h4>
+                        </div>
+              <?php } 
+                }
+            mysqli_free_result($result); ?>
+                    
+
             </div>
         </div>
         

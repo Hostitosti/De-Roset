@@ -164,16 +164,17 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     
 }
 .orderpage-item{
-
+    
     width: 25rem;
     height: 25rem;
 }
 .orderpage-item1{
 margin: auto;
+padding: 25px;
 transition-duration: 0.3s;
 border-radius: 25rem;
 }
