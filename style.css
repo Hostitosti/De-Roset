@@ -114,7 +114,24 @@ body{
     justify-content: space-between;
 }
 
-.content-grid{
+.content-grid-index{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 6rem;
+    grid-auto-rows: minmax(12rem, auto);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    grid-template-areas:
+    "a a"
+    "b c"
+    "d d"
+    "e f";
+    margin-left: 5rem;
+    margin-right: 5rem;
+    width: 100%;
+    font-size: x-large;
+}
+.content-grid-contact{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 6rem;
