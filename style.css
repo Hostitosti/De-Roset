@@ -32,6 +32,7 @@ body{
     padding: 10px;
     border-radius: 1px;
     border-radius: 10px;
+    box-shadow: 5px 5px black;
 }
 .grid-item1{
     grid-area: a;
@@ -62,6 +63,7 @@ body{
     background-color: #54BAB9;
     color: white;
     transform: scale(1.1);
+    box-shadow: 3px 3px black;
 }
 
 
@@ -74,6 +76,7 @@ body{
 .grid-item3 img{
     border-radius: 100px;
     background-color: gray;
+    
 }
 .grid-item4{
     grid-area: d;
@@ -88,7 +91,7 @@ body{
 .grid-item5 img{
     border-radius: 100px;
     background-color: gray;
-    margin-bottom: 2rem;
+    
 }
 .grid-item6{
     grid-area: f;

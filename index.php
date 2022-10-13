@@ -39,22 +39,36 @@ include "session.php";
             <h2>Smaak van de dag</h2>
 
             <?php
-            $sql = "SELECT image_link FROM products WHERE is_flavor_of_week = 1 LIMIT 1";
-            if ( $result = mysqli_query($conn,$sql) ) {
-            $product = mysqli_fetch_assoc($result); ?>
-            <img src="images/<?php echo $product['image_link']; ?>" alt="" width="150px" height="150px">
-            <?php mysqli_free_result($result);
-            }
-            mysqli_close($conn);?>
+                $sql = "SELECT image_link, name FROM products WHERE is_flavor_of_week = 1 LIMIT 1";
+                    if ( $result = mysqli_query($conn,$sql) ) {
+                        $product = mysqli_fetch_assoc($result); ?>
+                            <h4><?php echo $product['name']; ?></h4>
+                            <img src="images/<?php echo $product['image_link']; ?>" alt="" width="150px" height="150px">
+                        <?php mysqli_free_result($result);
+                    }?>
             <a href="#">Bestel</a>
         </div>
+
         <div class="grid-item grid-item4">d</div>
+        
         <div class="grid-item grid-item5">
             <h2>Populaire smaken</h2>
-            
-            <img src="images/ijsjeTest.jpg" alt="" width="150px" height="150px">
+            <?php 
+            $sql2 = "SELECT * FROM products Limit 3";
+            if ( $result = mysqli_query($conn,$sql2) )
+            {
+            while ($row=mysqli_fetch_assoc($result))
+            { ?>
+                <img src="images/<?php echo $row['image_link']; ?>" alt="" width="150px" height="150px">
+                <h4><?php echo $row['name']; ?></h4>
+            <?php 
+            } 
+            }
+            mysqli_free_result($result); 
+            mysqli_close($conn);?>
 
         </div>
+        
         <div class="grid-item grid-item6">f</div>
     </div>
     <script src="https://kit.fontawesome.com/05147bc226.js" crossorigin="anonymous"></script>
