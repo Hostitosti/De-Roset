@@ -39,7 +39,7 @@ include "session.php";
             <h2>Smaak van de dag</h2>
 
             <?php
-            $sql = "SELECT image_link FROM products ORDER BY ID LIMIT 1";
+            $sql = "SELECT image_link FROM products WHERE is_flavor_of_week = 1";
             if ( $result = mysqli_query($conn,$sql) ) {
             $product = mysqli_fetch_assoc($result); ?>
             <img src="images/<?php echo $product['image_link']; ?>" alt="ijsje" width="150px" height="150px">
@@ -53,8 +53,7 @@ include "session.php";
         <div class="grid-item grid-item5">
             <h2>Smaak van de dag</h2>
             <img src="images/ijsjeTest.jpg" alt="" width="150px" height="150px">
-            <img src="images/ijsjeTest.jpg" alt="" width="150px" height="150px">
-            <img src="images/ijsjeTest.jpg" alt="" width="150px" height="150px">
+
         </div>
         <div class="grid-item grid-item6">f</div>
     </div>
