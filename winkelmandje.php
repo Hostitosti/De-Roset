@@ -46,7 +46,7 @@ include "session.php";
             <a href="#">Bestel</a>
         </div>
                 
-        <div class="grid-item grid-item4 index">d</div>
+        <div class="grid-item grid-item4">d</div>
         
         <div class="grid-item grid-item5">
             <h2>Populaire smaken</h2>
