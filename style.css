@@ -3,7 +3,7 @@ html {
 
 }
 body{
-    background-color: #F7ECDE;
+    background-color: #FBF8F1;
 }
 
 .grid-container{
@@ -27,12 +27,12 @@ body{
 }
 
 .grid-item {
-    background-color: #E9DAC1;
+    background-color: #F7ECDE;
     display: flex;
     padding: 10px;
     border-radius: 1px;
     border-radius: 10px;
-    box-shadow: 5px 5px black;
+    box-shadow: 5px 5px #E9DAC1;
 }
 .grid-item1{
     grid-area: a;
@@ -76,7 +76,8 @@ body{
 .grid-item3 img{
     border-radius: 100px;
     background-color: gray;
-    
+    border-style: solid;
+    border-color: #E9DAC1;
 }
 .grid-item4{
     grid-area: d;
@@ -91,7 +92,8 @@ body{
 .grid-item5 img{
     border-radius: 100px;
     background-color: gray;
-    
+    border-style: solid;
+    border-color: #E9DAC1;
 }
 .grid-item6{
     grid-area: f;
