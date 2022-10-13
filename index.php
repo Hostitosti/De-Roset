@@ -43,7 +43,7 @@ include "session.php";
                        <img src="images/<?php echo $product['image_link']; ?>" alt="" width="150px" height="150px">
                     <?php mysqli_free_result($result);
                 }?>
-            <a href="#">Bestel</a>
+            <a href="bestellen.php">Bestel</a>
         </div>
 
         <div class="grid-item grid-item4 index">d</div>
