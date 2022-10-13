@@ -80,9 +80,13 @@ body{
     border-color: #E9DAC1;
 }
 .grid-item4{
-    grid-area: d;
+    grid-area: d;   
+}
+
+.grid-item4 .index {
     
 }
+
 .grid-item5{
     grid-area: e;
     align-items: center;
@@ -97,5 +101,9 @@ body{
 }
 .grid-item6{
     grid-area: f;
-    
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
 }
