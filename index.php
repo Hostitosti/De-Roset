@@ -40,13 +40,23 @@ include "session.php";
             if ( $result = mysqli_query($conn,$sql) ) {
                 $product = mysqli_fetch_assoc($result); ?>
                     <h4><?php echo $product['name']; ?></h4>
-                       <img src="images/<?php echo $product['image_link']; ?>" alt="" width="150px" height="150px">
+                       <img src="images/<?php echo $product['image_link']; ?>" alt="" width="" height="">
                     <?php mysqli_free_result($result);
                 }?>
             <a href="bestellen.php">Bestel</a>
         </div>
 
-        <div class="grid-item grid-item4 index">d</div>
+        <div class="grid-item grid-item4">
+            <div class="content-grid">
+                <div class="content-grid-item content-grid-item0"><h1>Over ons</h1></div>
+                <div class="content-grid-item content-grid-item1"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem, excepturi quam magni, et ipsum repudiandae eum corporis ullam placeat error eaque cum nihil assumenda nam vitae. Corporis facilis qui dicta libero pariatur. Ipsam rem, molestias, dolorum quas id doloremque error hic totam nemo sunt unde. Fuga ipsum at repudiandae.</p></div>
+                <div class="content-grid-item content-grid-item2"><img src="images/vanille-ijs.jpg" alt=""></div>
+                <div class="content-grid-item content-grid-item3"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus cum asperiores deleniti voluptates at expedita, nihil, cupiditate corrupti ab non vitae sapiente veniam reiciendis fugiat possimus voluptas ex architecto. Ratione atque provident, unde voluptas quo quod iure nihil cumque quasi odit incidunt quam culpa itaque nobis perferendis mollitia enim eius veniam libero consequatur saepe? Laboriosam, praesentium maiores earum cupiditate itaque voluptates asperiores. Doloremque pariatur quibusdam expedita? Accusamus mollitia enim placeat deserunt, porro voluptate illum cumque accusantium aspernatur reprehenderit laboriosam voluptates et, magni tenetur ea, quam officia libero provident vel eligendi esse. Nihil vitae ipsam perspiciatis hic, repudiandae asperiores eaque amet.</p></div>
+                <div class="content-grid-item content-grid-item4"><img src="images/chocolade-ijs.jpg" alt=""></div>
+                <div class="content-grid-item content-grid-item5"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam porro a autem mollitia iure quo rem inventore provident voluptatem, dolorem deleniti voluptas dolores totam nisi esse ipsum ex molestiae maiores sapiente nobis libero! Dolore ratione, fugit animi nam beatae accusantium omnis praesentium accusamus modi, debitis dolorum voluptatibus, numquam mollitia rem?</p></div>
+
+            </div>
+        </div>
         
         <div class="grid-item grid-item5">
             <h2>Populaire smaken</h2>
@@ -56,7 +66,7 @@ include "session.php";
                 {
                     while ($row=mysqli_fetch_assoc($result))
                     { ?>
-                        <img src="images/<?php echo $row['image_link']; ?>" alt="" width="150px" height="150px">
+                        <img src="images/<?php echo $row['image_link']; ?>" alt="" width="" height="">
                         <h4><?php echo $row['name']; ?></h4>
               <?php } 
                 }
