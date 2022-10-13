@@ -39,19 +39,19 @@ include "session.php";
             <h2>Smaak van de dag</h2>
 
             <?php
-            $sql = "SELECT image_link FROM products WHERE is_flavor_of_week = 1";
+            $sql = "SELECT image_link FROM products WHERE is_flavor_of_week = 1 LIMIT 1";
             if ( $result = mysqli_query($conn,$sql) ) {
             $product = mysqli_fetch_assoc($result); ?>
-            <img src="images/<?php echo $product['image_link']; ?>" alt="ijsje" width="150px" height="150px">
+            <img src="images/<?php echo $product['image_link']; ?>" alt="" width="150px" height="150px">
             <?php mysqli_free_result($result);
             }
             mysqli_close($conn);?>
-
             <a href="#">Bestel</a>
         </div>
         <div class="grid-item grid-item4">d</div>
         <div class="grid-item grid-item5">
-            <h2>Smaak van de dag</h2>
+            <h2>Populaire smaken</h2>
+            
             <img src="images/ijsjeTest.jpg" alt="" width="150px" height="150px">
 
         </div>
