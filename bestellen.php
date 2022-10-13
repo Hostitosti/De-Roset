@@ -43,8 +43,15 @@ include "session.php";
                 }?>
             <a href="#">Bestel</a>
         </div>
-                
-        <div class="grid-item grid-item4">d</div>
+        
+        <h1>Menu</h1>
+        <div class="grid-item grid-item4">
+            <div class="orderpage-container">
+                <div class="orderpage-item orderpage-item1">
+                    <a href=""><img src="images/vanille-ijs.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
         
         <div class="grid-item grid-item5">
             <h2>Populaire smaken</h2>

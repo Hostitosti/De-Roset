@@ -159,3 +159,31 @@ body{
 .content-grid-item3{ grid-area: d; }
 .content-grid-item4{ grid-area: e; }
 .content-grid-item5{ grid-area: f; }
+
+.orderpage-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+.orderpage-item{
+
+    width: 25rem;
+    height: 25rem;
+}
+.orderpage-item1{
+margin: auto;
+transition-duration: 0.3s;
+border-radius: 25rem;
+}
+
+.orderpage-item1:hover{
+    transform: scale(1.1);
+}
+
+.orderpage-item1 img{
+    width: 25rem;
+    height: 25rem;
+    border-radius: 25rem;
+}
