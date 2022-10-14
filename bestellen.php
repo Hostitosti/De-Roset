@@ -56,12 +56,15 @@ include "session.php";
                     { ?>
                     <div class="orderpage-item orderpage-item1">
                         <a href=""><img src="images/<?php echo $row['image_link']; ?>" alt="" width="" height=""></a>
-                        <h4><?php echo $row['name']; ?></h4>
+
                         </div>
               <?php } 
                 }
             mysqli_free_result($result); ?>
-                    
+                        <div class="orderpage-item orderpage-item1">
+                        <a href="">+</a>
+
+                        </div>
 
             </div>
         </div>
@@ -80,6 +83,7 @@ include "session.php";
                 }
             mysqli_free_result($result); 
             mysqli_close($conn);?>
+            
         </div>
         
         <div class="grid-item grid-item6">
