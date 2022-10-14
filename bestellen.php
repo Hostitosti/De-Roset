@@ -45,7 +45,6 @@ include "session.php";
         </div>
         
         <div class="grid-item grid-item4">
-            <h1>Menu</h1>
             <div class="orderpage-container">
                 
                 <?php 
@@ -54,20 +53,24 @@ include "session.php";
                 {
                     while ($row=mysqli_fetch_assoc($result))
                     { ?>
-                    <div class="orderpage-item orderpage-item1">
-                        <a href=""><img src="images/<?php echo $row['image_link']; ?>" alt="" width="" height=""></a>
-                            <h2><?php echo $row['name']; ?></h2>
-                            <h2>€<?php echo $row['price_per_kg']; ?></h2>
-                        </div>
+                        <a class="orderpage-link" href="">
+                            <div class="orderpage-item orderpage-item1">
+                                <img src="images/<?php echo $row['image_link']; ?>" alt="" width="" height="">
+                                <h2><?php echo $row['name']; ?></h2>
+                                <h2>€<?php echo $row['price_per_kg']; ?></h2>
+                            </div>
+                        </a>
               <?php } 
                 }
             mysqli_free_result($result); ?>
 
             <?php if(isset($_SESSION['id'])){
                 if($_SESSION['role'] == 'Medewerker') {?>
-                        <div class="orderpage-item orderpage-item1">
-                        <a href="add_product.php">+</a>
-                        </div>
+                            <a class="orderpage-link" href="add_product.php">
+                                <div class="orderpage-item orderpage-item1">
+                                +
+                                    </div>
+                                </a>
                     <?php } 
                     } ?>
             </div>
