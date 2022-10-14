@@ -168,16 +168,17 @@ body{
     
 }
 .orderpage-item{
-    
     width: 12rem;
-    height: 12rem;
+    height: 25rem;
+    
 }
 .orderpage-item1{
+display: flex;
 margin: auto;
 padding: 25px;
 transition-duration: 0.3s;
-border-radius: 25rem;
 text-align: center;
+flex-direction: column;
 }
 
 .orderpage-item a{

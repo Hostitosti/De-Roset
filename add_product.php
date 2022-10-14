@@ -37,12 +37,13 @@ if ($conn->query($sql) === TRUE) {
     <form action="" method="post">
         <input type="text" name="name" id="name" placeholder="name">
         <input type="text" name="price_per_kg" id="price_per_kg" placeholder="price_per_kg">
+        <label for="is_flavor_of_week">is flavor of the week</label>
         <input type="checkbox" name="is_flavor_of_week" id="is_flavor_of_week">
         <select name="category" id="category">
             <option value="ijs">ijs</option>
             <option value="eten">eten</option>
         </select>
-        <input type="text" name="image-link" id="image-link" placeholder="image-link">
+        <input type="text" name="image_link" id="image_link" placeholder="image link">
         <button type="submit" name="submit">add</button>
     </form>
 </body>

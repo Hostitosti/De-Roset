@@ -56,7 +56,8 @@ include "session.php";
                     { ?>
                     <div class="orderpage-item orderpage-item1">
                         <a href=""><img src="images/<?php echo $row['image_link']; ?>" alt="" width="" height=""></a>
-
+                            <h2><?php echo $row['name']; ?></h2>
+                            <h2>€<?php echo $row['price_per_kg']; ?></h2>
                         </div>
               <?php } 
                 }
