@@ -62,7 +62,7 @@ include "session.php";
                 }
             mysqli_free_result($result); ?>
                         <div class="orderpage-item orderpage-item1">
-                        <a href="">+</a>
+                        <a href="add_product.php">+</a>
 
                         </div>
 
