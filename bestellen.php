@@ -44,8 +44,8 @@ include "session.php";
             <a href="#">Bestel</a>
         </div>
         
-        <h1>Menu</h1>
         <div class="grid-item grid-item4">
+            <h1>Menu</h1>
             <div class="orderpage-container">
                 
                 <?php 
@@ -62,11 +62,14 @@ include "session.php";
               <?php } 
                 }
             mysqli_free_result($result); ?>
+
+            <?php if(isset($_SESSION['id'])){
+                if($_SESSION['role'] == 'Medewerker') {?>
                         <div class="orderpage-item orderpage-item1">
                         <a href="add_product.php">+</a>
-
                         </div>
-
+                    <?php } 
+                    } ?>
             </div>
         </div>
         
