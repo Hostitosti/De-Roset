@@ -59,16 +59,11 @@ include "session.php";
                                 <h2><?php echo $row['name']; ?></h2>
                                 <h2>€<?php echo $row['price_per_kg']; ?></h2>
                             </div>
-                            <?php if(isset($_SESSION['id'])){
-                            if($_SESSION['role'] == 'Medewerker') {?>
-                            <a href="edit_product.php?id=<?php echo $row['id']; ?>"></a>
-                            <?php } 
-                             } ?>
+                            
                         </a>
               <?php } 
                 }
             mysqli_free_result($result); ?>
-
             <?php if(isset($_SESSION['id'])){
                 if($_SESSION['role'] == 'Medewerker') {?>
                             <a class="orderpage-link" href="add_product.php">
