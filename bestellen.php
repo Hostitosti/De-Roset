@@ -59,6 +59,11 @@ include "session.php";
                                 <h2><?php echo $row['name']; ?></h2>
                                 <h2>€<?php echo $row['price_per_kg']; ?></h2>
                             </div>
+                            <?php if(isset($_SESSION['id'])){
+                            if($_SESSION['role'] == 'Medewerker') {?>
+                            <a href="edit_product.php?id=<?php echo $row['id']; ?>"></a>
+                            <?php } 
+                             } ?>
                         </a>
               <?php } 
                 }
@@ -86,6 +91,8 @@ include "session.php";
                     { ?>
                         <img src="images/<?php echo $row['image_link']; ?>" alt="" width="" height="">
                         <h4><?php echo $row['name']; ?></h4>
+
+
               <?php } 
                 }
             mysqli_free_result($result); 
