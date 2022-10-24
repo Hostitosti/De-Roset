@@ -165,11 +165,11 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     
 }
 .orderpage-item{
-    width: 12rem;
+    width: auto;
     height: auto;
     background-color: #E9DAC1;
     margin-left: 2rem;
