@@ -38,9 +38,12 @@ if ($conn->query($sql) === TRUE) {
 </head>
 <body>
 <form action="" method="post">
+<label for="name">name</label>
 <input type="text" name="name" id="name" placeholder="name" value="<?php echo $product['name'] ?>">
-        <input type="text" name="price_per_kg" id="price_per_kg" placeholder="price_per_kg" value="<?php echo $product['price_per_kg'] ?>">
-        <label for="is_flavor_of_week">is flavor of the week</label>
+        <p>
+        <label for="price">Price per KG</label>    
+        <input type="text" name="price_per_kg" id="price_per_kg" placeholder="price_per_kg" value="<?php echo $product['price_per_kg'] ?>"></p>
+        <p><label for="is_flavor_of_week">is flavor of the week</label>
         <select name="is_flavor_of_week" id="is_flavor_of_week">
             <?php if($product['is_flavor_of_week'] != 0){?>
                 <option value="1">ja</option>
@@ -49,14 +52,16 @@ if ($conn->query($sql) === TRUE) {
                 ?> <option value="0">nee</option>
                     <option value="1">ja</option>
             <?php } ?>
-        </select>
+        </select></p>
+        <p><label for="category">category</label>
         <select name="category" id="category">
             <option value="<?php echo $product['category'] ?>"><?php echo $product['category'] ?></option>
             <option value="ijs">ijs</option>
             <option value="eten">eten</option>
-        </select>
+        </select></p>
+        <label for="image_link">image link</label>
         <input type="text" name="image_link" id="image_link" value="<?php echo $product['image_link'] ?>">
-        <button type="submit" name="submit">Edit</button>
+        <p><button type="submit" name="submit">Edit</button></p>
     </form>
     <a href="delete_product.php?id=<?php echo $product['id']?>">Delete product</a>
 </body>
