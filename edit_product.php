@@ -41,7 +41,15 @@ if ($conn->query($sql) === TRUE) {
 <input type="text" name="name" id="name" placeholder="name" value="<?php echo $product['name'] ?>">
         <input type="text" name="price_per_kg" id="price_per_kg" placeholder="price_per_kg" value="<?php echo $product['price_per_kg'] ?>">
         <label for="is_flavor_of_week">is flavor of the week</label>
-        <input type="checkbox" name="is_flavor_of_week" id="is_flavor_of_week" value="<?php echo $product['is_flavor_of_week'] ?>">
+        <select name="is_flavor_of_week" id="is_flavor_of_week">
+            <?php if($product['is_flavor_of_week'] != 0){?>
+                <option value="1">ja</option>
+                <option value="0">nee</option>
+            <?php } else {
+                ?> <option value="0">nee</option>
+                    <option value="1">ja</option>
+            <?php } ?>
+        </select>
         <select name="category" id="category">
             <option value="<?php echo $product['category'] ?>"><?php echo $product['category'] ?></option>
             <option value="ijs">ijs</option>
