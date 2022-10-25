@@ -24,7 +24,7 @@ include "session.php";
         <div class="grid-item grid-item2">
             <a class="button-1" href="index.php">Over ons</a>
                 <a class="button-1" href="bestellen.php">Bestellen <i class="fa-solid fa-store"></i></a>
-                    <a class="button-1" href="#">Blog <i class="fa-solid fa-square-rss"></i></a>
+                    <a class="button-1" href="blog.php">Blog <i class="fa-solid fa-square-rss"></i></a>
                         <a class="button-1" href="contact.php">Contact <i class="fa-solid fa-phone"></i></a>
                             <a class="button-1" href="winkelmandje.php">Winkelmandje <i class="fa-solid fa-cart-shopping"></i></a>
                         <?php if(isset($_SESSION['id'])){
