@@ -42,7 +42,7 @@ include "session.php";
                 $product = mysqli_fetch_assoc($result);
                  ?>
                     <h4><?php echo $product['name']; ?></h4>
-                       <img src="images/<?php echo $product['image_link']; ?>" alt="" width="" height="">
+                       <img class="load" src="images/<?php echo $product['image_link']; ?>" alt="" width="" height="">
                     <?php mysqli_free_result($result);
                 }?>
             <a class="button-1" href="#">Bestel</a>
@@ -58,7 +58,7 @@ include "session.php";
                     while ($row=mysqli_fetch_assoc($result))
                     { ?>
                             <div class="orderpage-item orderpage-item1">
-                                <img src="images/<?php echo $row['image_link']; ?>" alt="" width="" height="">
+                                <img class="load" src="images/<?php echo $row['image_link']; ?>" alt="" width="" height="">
                                 <h2><?php echo $row['name']; ?></h2>
                                 <h2>€<?php echo $row['price_per_kg']; ?></h2>
                                 <a class="button-1" class="orderpage-link" href="">Bestel</a>
@@ -91,7 +91,7 @@ include "session.php";
                 {
                     while ($row=mysqli_fetch_assoc($result))
                     { ?>
-                        <img src="images/<?php echo $row['image_link']; ?>" alt="" width="" height="">
+                        <img class="load" src="images/<?php echo $row['image_link']; ?>" alt="" width="" height="">
                         <h4><?php echo $row['name']; ?></h4>
 
 

@@ -44,7 +44,7 @@ include "session.php";
             if ( $result = mysqli_query($conn,$sql) ) {
                 $product = mysqli_fetch_assoc($result); ?>
                     <h4><?php echo $product['name']; ?></h4>
-                       <img clas src="images/<?php echo $product['image_link']; ?>" alt="" width="" height="">
+                       <img class="load" src="images/<?php echo $product['image_link']; ?>" alt="" width="" height="">
                     <?php mysqli_free_result($result);
                 }?>
             <a class="button-1" href="#">Bestel</a>
@@ -158,7 +158,7 @@ include "session.php";
                 {
                     while ($row=mysqli_fetch_assoc($result))
                     { ?>
-                        <img src="images/<?php echo $row['image_link']; ?>" alt="" width="" height="">
+                        <img class="load" src="images/<?php echo $row['image_link']; ?>" alt="" width="" height="">
                         <h4><?php echo $row['name']; ?></h4>
               <?php } 
                 }
