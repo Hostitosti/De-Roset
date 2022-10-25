@@ -26,7 +26,10 @@ include "session.php";
                     <a href="blog.php">Blog <i class="fa-solid fa-square-rss"></i></a>
                         <a href="contact.php">Contact <i class="fa-solid fa-phone"></i></a>
                             <a href="#">Winkelmandje <i class="fa-solid fa-cart-shopping"></i></a>
-                        <?php if(isset($_SESSION['id'])){?>
+                        <?php if(isset($_SESSION['id'])){
+                            if($_SESSION['role'] == 'Medewerker') {?>
+                                <a href="worker_page.php">Medewerker pagina</a>
+                        <?php } ?>
                             <a href="edit_user.php?id=<?php echo $_SESSION['id'] ?>"><?php echo $_SESSION['firstname']; ?> <i class="fa-solid fa-person"></i></a>
                                 <a href="logout.php">logout <i class="fa-solid fa-circle-xmark"></i></a>
                             <?php } else { ?>
