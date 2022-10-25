@@ -7,11 +7,11 @@ body{
 }
 
 .load{
-    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 1s; /* Firefox < 16 */
-     -ms-animation: fadein 1s; /* Internet Explorer */
-      -o-animation: fadein 1s; /* Opera < 12.1 */
-         animation: fadein 1s;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+     -ms-animation: fadein 2s; /* Internet Explorer */
+      -o-animation: fadein 2s; /* Opera < 12.1 */
+         animation: fadein 2s;
 }
 @keyframes fadein {
     from { opacity: 0;
@@ -178,8 +178,9 @@ body{
     
 }
 .grid-item3 img{
-    
-    border-radius: 100px;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 25rem;
     background-color: gray;
     border-style: solid;
     border-color: #E9DAC1;
@@ -202,7 +203,9 @@ body{
     
 }
 .grid-item5 img{
-    border-radius: 100px;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 25rem;
     background-color: gray;
     border-style: solid;
     border-color: #E9DAC1;
@@ -301,4 +304,14 @@ border-radius: 2rem;
     width: 12rem;
     height: 12rem;
     border-radius: 25rem;
+}
+
+.table{
+    
+}
+.table th{
+    padding: 10px;
+}
+.table td{
+    padding: 10px;
 }

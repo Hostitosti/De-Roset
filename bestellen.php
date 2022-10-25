@@ -57,8 +57,8 @@ include "session.php";
                 {
                     while ($row=mysqli_fetch_assoc($result))
                     { ?>
-                            <div class="orderpage-item orderpage-item1">
-                                <img class="load" src="images/<?php echo $row['image_link']; ?>" alt="" width="" height="">
+                            <div class="orderpage-item orderpage-item1 load">
+                                <img src="images/<?php echo $row['image_link']; ?>" alt="" width="" height="">
                                 <h2><?php echo $row['name']; ?></h2>
                                 <h2>€<?php echo $row['price_per_kg']; ?></h2>
                                 <a class="button-1" class="orderpage-link" href="">Bestel</a>
@@ -74,7 +74,7 @@ include "session.php";
             <?php if(isset($_SESSION['id'])){
                 if($_SESSION['role'] == 'Medewerker') {?>
                             <a class="" href="add_product.php">
-                                <div class="orderpage-item orderpage-item1" style="font-size: 12rem; color: black;">
+                                <div class="orderpage-item orderpage-item1 load" style="font-size: 12rem; color: black;">
                                 +
                                     </div>
                                 </a>

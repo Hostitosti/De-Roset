@@ -50,10 +50,10 @@ include "session.php";
         </div>
                 
         <div class="grid-item grid-item4">
-            <div class="content-grid-contact">
+            <div class="content-grid-contact load">
                 <div class="content-grid-item content-grid-item0"><h1>Contact</h1></div>
                 <div class="content-grid-item content-grid-item1"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quam, accusamus dicta explicabo quis consectetur quibusdam? Suscipit labore nobis nihil! Natus accusantium vero quas ut.</p></div>
-                <div class="content-grid-item content-grid-item2"><img src="images/contact.jpg" alt=""></div>
+                <div class="content-grid-item content-grid-item2"><img class="load" src="images/contact.jpg" alt=""></div>
             </div>
         </div>
         
