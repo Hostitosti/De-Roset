@@ -11,6 +11,7 @@ include "session.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestellen</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Averia Sans Libre' rel='stylesheet'>
 </head>
 <body>
     <div class="grid-container">
@@ -68,6 +69,7 @@ include "session.php";
                     <?php } 
                     } ?>
                             </div>
+                            
               <?php } 
                 }
             mysqli_free_result($result); ?>
