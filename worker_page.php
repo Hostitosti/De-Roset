@@ -22,19 +22,19 @@ include "session.php";
             <h2>De Roset</h2>
         </div>
         <div class="grid-item grid-item2">
-            <a href="index.php">Over ons</a>
-                <a href="bestellen.php">Bestellen <i class="fa-solid fa-store"></i></a>
-                    <a href="#">Blog <i class="fa-solid fa-square-rss"></i></a>
-                        <a href="contact.php">Contact <i class="fa-solid fa-phone"></i></a>
-                            <a href="winkelmandje.php">Winkelmandje <i class="fa-solid fa-cart-shopping"></i></a>
+            <a class="button-1" href="index.php">Over ons</a>
+                <a class="button-1" href="bestellen.php">Bestellen <i class="fa-solid fa-store"></i></a>
+                    <a class="button-1" href="#">Blog <i class="fa-solid fa-square-rss"></i></a>
+                        <a class="button-1" href="contact.php">Contact <i class="fa-solid fa-phone"></i></a>
+                            <a class="button-1" href="winkelmandje.php">Winkelmandje <i class="fa-solid fa-cart-shopping"></i></a>
                         <?php if(isset($_SESSION['id'])){
                         if($_SESSION['role'] == 'Medewerker') {?>
-                            <a href="worker_page.php">Medewerker pagina</a>
+                            <a class="button-1" href="worker_page.php">Medewerker pagina</a>
                         <?php } ?>
-                            <a href="edit_user.php?id=<?php echo $_SESSION['id'] ?>"><?php echo $_SESSION['firstname']; ?> <i class="fa-solid fa-person"></i></a>
-                                <a href="logout.php">logout <i class="fa-solid fa-circle-xmark"></i></a>
+                            <a class="button-1" href="edit_user.php?id=<?php echo $_SESSION['id'] ?>"><?php echo $_SESSION['firstname']; ?> <i class="fa-solid fa-person"></i></a>
+                                <a class="button-1" href="logout.php">logout <i class="fa-solid fa-circle-xmark"></i></a>
                             <?php } else { ?>
-                        <a href="login.php">login <i class="fa-solid fa-circle-plus"></i></a>
+                        <a class="button-1" href="login.php">login <i class="fa-solid fa-circle-plus"></i></a>
                     <?php } ?></div>
 
     <div class="grid-item grid-item3">
@@ -44,14 +44,110 @@ include "session.php";
             if ( $result = mysqli_query($conn,$sql) ) {
                 $product = mysqli_fetch_assoc($result); ?>
                     <h4><?php echo $product['name']; ?></h4>
-                       <img src="images/<?php echo $product['image_link']; ?>" alt="" width="" height="">
+                       <img clas src="images/<?php echo $product['image_link']; ?>" alt="" width="" height="">
                     <?php mysqli_free_result($result);
                 }?>
-            <a href="#">Bestel</a>
+            <a class="button-1" href="#">Bestel</a>
         </div>
                 
-        <div class="grid-item grid-item4">
+        <div class="grid-item grid-item4 flex">
+        <div>
+
+            <h2>Producten</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Plaatje</th>
+                    <th scope="col">Naam</th>
+                    <th scope="col">Prijs per KG</th>
+                    <th scope="col">Is Smaak van de week</th>
+                    <th scope="col">categorie</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php
+            $sql = "SELECT * From products";
+            if ( $result = mysqli_query($conn,$sql) )
+            {
+              
+              while ($row=mysqli_fetch_assoc($result))
+                { ?>
+                            <tr>
+                            <th scope="row"><?php echo $row['id']; ?></th>
+                            <td><img src="images/<?php echo $row['image_link']; ?>" alt="Plaatje product" width="50px" height="50px"></td>
+                            <td><?php echo $row['name']; ?></td>
+                            <td><?php echo $row['price_per_kg']; ?></td>
+                            <td><?php echo $row['is_flavor_of_week']; ?></td>
+                            <td><?php echo $row['category']; ?></td>
+                            <td><a href="delete_product.php?id=<?php echo $row['id'] ?>"  class="button-3">Delete</a></td>
+                            <td><a href="edit_product.php?id=<?php echo $row['id'] ?>" class="button-2">Edit</a></td>
+                            </tr>
+                            
+                            <?php }
                 
+                mysqli_free_result($result);
+            } ?>
+                <tr>
+                    <td></td>
+                    <td><a class="button-4" href="add_product.php">Add product +</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h2>Gebruikers</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Voornaam</th>
+                    <th scope="col">Achternaam</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Wachtwoord</th>
+                    <th scope="col">Geboortedatum</th>
+                    <th scope="col">Telefoonnummer</th>
+                    <th scope="col">Adres</th>
+                    <th scope="col">Zipcode</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php
+            $sql = "SELECT * From users";
+            if ( $result = mysqli_query($conn,$sql) )
+            {
+              
+              while ($row=mysqli_fetch_assoc($result))
+                { ?>
+                            <tr>
+                            <th scope="row"><?php echo $row['id']; ?></th>
+                            <td><?php echo $row['firstname']; ?></td>
+                            <td><?php echo $row['lastname']; ?></td>
+                            <td><?php echo $row['email']; ?></td>
+                            <td><?php echo $row['password']; ?></td>
+                            <td><?php echo $row['date_of_birth']; ?></td>
+                            <td><?php echo $row['phonenumber']; ?></td>
+                            <td><?php echo $row['address']; ?></td>
+                            <td><?php echo $row['zipcode']; ?></td>
+                            <td><?php echo $row['city']; ?></td>
+                            <td><?php echo $row['role']; ?></td>
+                            <td><a href="delete_user.php?id=<?php echo $row['id'] ?>"  class="button-3">Delete</a></td>
+                            <td><a href="edit_user.php?id=<?php echo $row['id'] ?>" class="button-2">Edit</a></td>
+                            </tr>
+                            
+                            <?php }
+                
+                mysqli_free_result($result);
+            } ?>
+                <tr>
+                    <td></td>
+                    <td><a class="button-4" href="register.php">Add user +</a></td>
+                </tr>
+                </tbody>
+                </table>
+        </div>
         </div>
         
         <div class="grid-item grid-item5">

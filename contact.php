@@ -21,19 +21,19 @@ include "session.php";
             <h2>De Roset</h2>
         </div>
         <div class="grid-item grid-item2">
-            <a href="index.php">Over ons</a>
-                <a href="bestellen.php">Bestellen <i class="fa-solid fa-store"></i></a>
-                    <a href="blog.php">Blog <i class="fa-solid fa-square-rss"></i></a>
-                        <a href="#">Contact <i class="fa-solid fa-phone"></i></a>
-                            <a href="winkelmandje.php">Winkelmandje <i class="fa-solid fa-cart-shopping"></i></a>
+            <a class="button-1" href="index.php">Over ons</a>
+                <a class="button-1" href="bestellen.php">Bestellen <i class="fa-solid fa-store"></i></a>
+                    <a class="button-1" href="#">Blog <i class="fa-solid fa-square-rss"></i></a>
+                        <a class="button-1" href="contact.php">Contact <i class="fa-solid fa-phone"></i></a>
+                            <a class="button-1" href="winkelmandje.php">Winkelmandje <i class="fa-solid fa-cart-shopping"></i></a>
                         <?php if(isset($_SESSION['id'])){
-                            if($_SESSION['role'] == 'Medewerker') {?>
-                                <a href="worker_page.php">Medewerker pagina</a>
+                        if($_SESSION['role'] == 'Medewerker') {?>
+                            <a class="button-1" href="worker_page.php">Medewerker pagina</a>
                         <?php } ?>
-                            <a href="edit_user.php?id=<?php echo $_SESSION['id'] ?>"><?php echo $_SESSION['firstname']; ?> <i class="fa-solid fa-person"></i></a>
-                                <a href="logout.php">logout <i class="fa-solid fa-circle-xmark"></i></a>
+                            <a class="button-1" href="edit_user.php?id=<?php echo $_SESSION['id'] ?>"><?php echo $_SESSION['firstname']; ?> <i class="fa-solid fa-person"></i></a>
+                                <a class="button-1" href="logout.php">logout <i class="fa-solid fa-circle-xmark"></i></a>
                             <?php } else { ?>
-                        <a href="login.php">login <i class="fa-solid fa-circle-plus"></i></a>
+                        <a class="button-1" href="login.php">login <i class="fa-solid fa-circle-plus"></i></a>
                     <?php } ?></div>
 
     <div class="grid-item grid-item3">
@@ -46,7 +46,7 @@ include "session.php";
                        <img src="images/<?php echo $product['image_link']; ?>" alt="" width="" height="">
                     <?php mysqli_free_result($result);
                 }?>
-            <a href="#">Bestel</a>
+            <a class="button-1" href="#">Bestel</a>
         </div>
                 
         <div class="grid-item grid-item4">

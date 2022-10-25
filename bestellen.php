@@ -19,19 +19,19 @@ include "session.php";
             <h2>De Roset</h2>
         </div>
         <div class="grid-item grid-item2">
-            <a href="index.php">Over ons</a>
-                <a href="#">Bestellen <i class="fa-solid fa-store"></i></a>
-                    <a href="blog.php">Blog <i class="fa-solid fa-square-rss"></i></a>
-                        <a href="contact.php">Contact <i class="fa-solid fa-phone"></i></a>
-                            <a href="winkelmandje.php">Winkelmandje <i class="fa-solid fa-cart-shopping"></i></a>
+            <a class="button-1" href="index.php">Over ons</a>
+                <a class="button-1" href="bestellen.php">Bestellen <i class="fa-solid fa-store"></i></a>
+                    <a class="button-1" href="#">Blog <i class="fa-solid fa-square-rss"></i></a>
+                        <a class="button-1" href="contact.php">Contact <i class="fa-solid fa-phone"></i></a>
+                            <a class="button-1" href="winkelmandje.php">Winkelmandje <i class="fa-solid fa-cart-shopping"></i></a>
                         <?php if(isset($_SESSION['id'])){
-                            if($_SESSION['role'] == 'Medewerker') {?>
-                            <a href="worker_page.php">Medewerker pagina</a>
-                            <?php } ?>
-                            <a href="edit_user.php?id=<?php echo $_SESSION['id'] ?>"><?php echo $_SESSION['firstname']; ?> <i class="fa-solid fa-person"></i></a>
-                                <a href="logout.php">logout <i class="fa-solid fa-circle-xmark"></i></a>
+                        if($_SESSION['role'] == 'Medewerker') {?>
+                            <a class="button-1" href="worker_page.php">Medewerker pagina</a>
+                        <?php } ?>
+                            <a class="button-1" href="edit_user.php?id=<?php echo $_SESSION['id'] ?>"><?php echo $_SESSION['firstname']; ?> <i class="fa-solid fa-person"></i></a>
+                                <a class="button-1" href="logout.php">logout <i class="fa-solid fa-circle-xmark"></i></a>
                             <?php } else { ?>
-                        <a href="login.php">login <i class="fa-solid fa-circle-plus"></i></a>
+                        <a class="button-1" href="login.php">login <i class="fa-solid fa-circle-plus"></i></a>
                     <?php } ?></div>
 
     <div class="grid-item grid-item3">
@@ -45,10 +45,10 @@ include "session.php";
                        <img src="images/<?php echo $product['image_link']; ?>" alt="" width="" height="">
                     <?php mysqli_free_result($result);
                 }?>
-            <a href="#">Bestel</a>
+            <a class="button-1" href="#">Bestel</a>
         </div>
         
-        <div class="grid-item grid-item4">
+        <div class="grid-item grid-item4 flex">
             <div class="orderpage-container">
                 
                 <?php 
@@ -61,7 +61,7 @@ include "session.php";
                                 <img src="images/<?php echo $row['image_link']; ?>" alt="" width="" height="">
                                 <h2><?php echo $row['name']; ?></h2>
                                 <h2>€<?php echo $row['price_per_kg']; ?></h2>
-                                <a class="orderpage-link" href="">Bestel</a>
+                                <a class="button-1" class="orderpage-link" href="">Bestel</a>
                                 <?php if(isset($_SESSION['id'])){
                                 if($_SESSION['role'] == 'Medewerker') {?>
                                 <a href="edit_product.php?id=<?php echo $row['id']; ?>" style="color: black;">Edit product</a>

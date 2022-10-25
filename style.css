@@ -6,6 +6,52 @@ body{
     background-color: #FBF8F1;
 }
 
+img {
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+     -ms-animation: fadein 1s; /* Internet Explorer */
+      -o-animation: fadein 1s; /* Opera < 12.1 */
+         animation: fadein 1s;
+}
+@keyframes fadein {
+    from { opacity: 0;
+    transform: translateY(-20px); }
+    to   { opacity: 1;
+        transform: translateY(0px);  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0;
+        transform: translateY(-20px); }
+        to   { opacity: 1;
+            transform: translateY(0px);  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0;
+        transform: translateY(-20px); }
+        to   { opacity: 1;
+            transform: translateY(0px);  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0;
+        transform: translateY(-20px); }
+        to   { opacity: 1;
+            transform: translateY(0px);  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0;
+        transform: translateY(-20px); }
+        to   { opacity: 1;
+            transform: translateY(0px);  }
+}
+
 .grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -55,22 +101,72 @@ body{
     background-color: #A9C4A1;
     padding: 20px;
 }
-.grid-item2 a, .grid-item3 a, .orderpage-link{
+.button-1{
     margin-left: 10px;
     margin-right: 10px;
     text-decoration: none;
     color: black;
-    background-color: #F7ECDE;
+    background-color: #E9DAC1;
     padding: 20px;
     border-radius: 5px;
     transition-duration: 0.3s;
     
 }
-.grid-item2 a:hover, .grid-item3 a:hover{
+.button-1:hover{
     background-color: #8caa83;
     color: white;
     transform: scale(1.1);
+    margin-bottom: 10px;
+    box-shadow: 3px 3px black;
+}
+
+.button-2{
+    text-decoration: none;
+    color: black;
+    background-color: orange;
+    padding: 10px;
+    border-radius: 5px;
+    transition-duration: 0.3s;
     
+}
+.button-2:hover{
+    background-color: darkorange;
+    color: white;
+    transform: scale(1.1);
+    margin-bottom: 10px;
+    box-shadow: 3px 3px black;
+}
+.button-3{
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+    
+}
+.button-3:hover{
+    background-color: darkred;
+    color: white;
+    transform: scale(1.1);
+    margin-bottom: 10px;
+    box-shadow: 3px 3px black;
+}
+
+.button-4{
+    text-decoration: none;
+    color: white;
+    background-color: green;
+    padding: 10px;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+    
+}
+.button-4:hover{
+    background-color: darkgreen;
+    color: white;
+    transform: scale(1.1);
+    margin-bottom: 10px;
     box-shadow: 3px 3px black;
 }
 
@@ -89,8 +185,11 @@ body{
     border-color: #E9DAC1;
 }
 .grid-item4{
-    grid-area: d;   
-    
+    grid-area: d;  
+}
+.flex{
+    display: flex;
+    flex-direction: column;
 }
 .grid-item4 .head{
     padding: 20px;
