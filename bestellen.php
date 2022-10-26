@@ -76,7 +76,7 @@ include "session.php";
             <?php if(isset($_SESSION['id'])){
                 if($_SESSION['role'] == 'Medewerker') {?>
                             <a class="" href="add_product.php">
-                                <div class="orderpage-item orderpage-item1 load" style="font-size: 12rem; color: black;">
+                                <div class="orderpage-item orderpage-item1 orderpage-plus load">
                                 +
                                     </div>
                                 </a>

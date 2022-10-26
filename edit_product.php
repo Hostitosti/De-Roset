@@ -62,8 +62,8 @@ if ($conn->query($sql) === TRUE) {
         </select></p>
         <label for="image_link">image link</label>
         <input type="text" name="image_link" id="image_link" value="<?php echo $product['image_link'] ?>">
-        <p><button type="submit" name="submit">Edit</button></p>
+        <p><button type="submit" name="submit" class="button-2">Edit</button></p>
     </form>
-    <a href="delete_product.php?id=<?php echo $product['id']?>">Delete product</a>
+    <a href="delete_product.php?id=<?php echo $product['id']?>" class="button-3">Delete product</a>
 </body>
 </html>
