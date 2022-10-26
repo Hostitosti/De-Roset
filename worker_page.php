@@ -51,7 +51,7 @@ if(isset($_SESSION['id'])){
             <a class="button-1" href="#">Bestel</a>
         </div>
                 
-        <div class="grid-item grid-item4 flex ">
+        <div class="grid-item grid-item4 flex " style="padding: 2rem;">
         <div class="load">
 
             <h2>Producten</h2>
