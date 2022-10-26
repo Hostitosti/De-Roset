@@ -39,17 +39,46 @@ if ($conn->query($sql) === TRUE) {
     <link href='https://fonts.googleapis.com/css?family=Averia Sans Libre' rel='stylesheet'>
 </head>
 <body>
-    <form action="" method="post">
-        <input type="text" name="firstname" id="firstname" placeholder="firstname">
-        <input type="text" name="lastname" id="lastname" placeholder="lastname">
-        <input type="text" name="email" id="email" placeholder="email">
-        <input type="password" name="password" id="password" placeholder="">
-        <input type="date" name="date_of_birth" id="date_of_birth" placeholder="">
-        <input type="text" name="phonenumber" id="phonenumber" placeholder="06123456789">
-        <input type="text" name="address" id="address" placeholder="address">
-        <input type="text" name="zipcode" id="zipcode" placeholder="zipcode">
-        <input type="text" name="city" id="city" placeholder="city">
-        <button type="submit" name="submit">register</button>
+    <h1>Registreer</h1>
+    <form action="" method="post" class="form_register">
+        <div>
+            <label for="firstname">Voornaam</label>
+            <input type="text" name="firstname" id="firstname" placeholder="firstname">
+        </div>
+        <div>
+            <label for="lastname">Achternaam</label>
+            <input type="text" name="lastname" id="lastname" placeholder="lastname">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="email">
+        </div>
+        <div>
+            <label for="password">Wachtwoord</label>
+            <input type="password" name="password" id="password" placeholder="">
+        </div>
+        <div>
+            <label for="date_of_birth">Geboortedatum</label>
+            <input type="date" name="date_of_birth" id="date_of_birth" placeholder="">
+        </div>
+        <div>
+            <label for="phonenumber">Telefoonnummer</label>
+            <input type="text" name="phonenumber" id="phonenumber" placeholder="06123456789">
+        </div>
+        <div>
+            <label for="address">Adres</label>
+            <input type="text" name="address" id="address" placeholder="address">
+        </div>
+        <div>
+            <label for="zipcode">Zipcode</label>
+            <input type="text" name="zipcode" id="zipcode" placeholder="zipcode">
+        </div>
+        <div>
+            <label for="city">Stad</label>
+            <input type="text" name="city" id="city" placeholder="city">
+        </div>
+        <button type="submit" name="submit" class="button-4">register</button>
+        <a href="" onclick="history.back()">Terug</a>
     </form>
 </body>
 </html>

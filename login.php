@@ -37,10 +37,17 @@ if(isset($_POST["submit"])){
     <link href='https://fonts.googleapis.com/css?family=Averia Sans Libre' rel='stylesheet'>
 </head>
 <body>
+    <H1>Login</H1>
     <form action="" method="post">
-        <input type="email" name="email" id="email" placeholder="placeholder@email.com">
-        <input type="password" name="password" id="password" placeholder="">
-        <button type="submit" name="submit">Login</button>
+        <div style="margin-bottom: 10px;">
+            <label for="email">Email </label>
+            <input type="email" name="email" id="email" placeholder="placeholder@email.com">
+        </div>
+        <div>
+            <label for="password">password</label>
+            <input type="password" name="password" id="password" placeholder="">
+        </div>
+        <button type="submit" name="submit" class="button-4">Login</button>
     </form>
     <a href="register.php">Geen acount? Maak een gratis account aan!</a> 
 </body>

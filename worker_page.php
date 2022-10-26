@@ -2,7 +2,8 @@
 require "connection.php";
 include "session.php";
 
-
+if(isset($_SESSION['id'])){
+    if($_SESSION['role'] == 'Medewerker') {
 ?>
 
 <!DOCTYPE html>
@@ -78,7 +79,9 @@ include "session.php";
                             <td><img src="images/<?php echo $row['image_link']; ?>" alt="Plaatje product" width="50px" height="50px"></td>
                             <td><?php echo $row['name']; ?></td>
                             <td><?php echo $row['price_per_kg']; ?></td>
-                            <td><?php echo $row['is_flavor_of_week']; ?></td>
+                            <td><?php if($row['is_flavor_of_week'] == 0){
+                                echo "nee";
+                            } else { echo "ja"; } ?></td>
                             <td><?php echo $row['category']; ?></td>
                             <td><a href="delete_product.php?id=<?php echo $row['id'] ?>"  class="button-3">Delete</a></td>
                             <td><a href="edit_product.php?id=<?php echo $row['id'] ?>" class="button-2">Edit</a></td>
@@ -184,3 +187,8 @@ include "session.php";
     <script src="https://kit.fontawesome.com/05147bc226.js" crossorigin="anonymous"></script>
     </body>
 </html>
+<?php }
+else {
+    header("location: index.php");
+}} 
+?>
