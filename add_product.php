@@ -35,17 +35,33 @@ if ($conn->query($sql) === TRUE) {
     <link href='https://fonts.googleapis.com/css?family=Averia Sans Libre' rel='stylesheet'>
 </head>
 <body>
-    <form action="" method="post">
-        <input type="text" name="name" id="name" placeholder="name">
-        <input type="text" name="price_per_kg" id="price_per_kg" placeholder="price_per_kg">
-        <label for="is_flavor_of_week">is flavor of the week</label>
-        <input type="checkbox" name="is_flavor_of_week" id="is_flavor_of_week">
-        <select name="category" id="category">
-            <option value="ijs">ijs</option>
-            <option value="eten">eten</option>
-        </select>
-        <input type="text" name="image_link" id="image_link" placeholder="image link">
-        <button type="submit" name="submit">add</button>
+    <h1>Maak een product aan</h1>
+    <form action="" method="post" class="form_register">
+        <div>
+            <label for="">naam</label>
+            <input type="text" name="name" id="name" placeholder="naam">
+        </div>
+        <div>
+            <label for="">prijs per KG</label>
+            <input type="text" name="price_per_kg" id="price_per_kg" placeholder="prijs per KG">
+        </div>
+        <div>
+            <label for="is_flavor_of_week">is flavor of the week</label>
+            <input type="checkbox" name="is_flavor_of_week" id="is_flavor_of_week">
+        </div>
+        <div>
+            <label for="">Categorie</label>
+            <select name="category" id="category">
+                <option value="ijs">ijs</option>
+                <option value="eten">eten</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Link van plaatje </label>
+            <input type="text" name="image_link" id="image_link" placeholder="image url">
+        </div>
+        <button type="submit" name="submit" class="button-4">Maak aan</button>
+        <a href="" onclick="history.back()">Terug</a>
     </form>
 </body>
 </html>
