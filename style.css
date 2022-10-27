@@ -386,7 +386,11 @@ border-radius: 2rem;
     .content-grid-contact{
         font-size: 12px;
     }
-    
+    .table{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
   }
 
   @media(max-width: 400px) {
