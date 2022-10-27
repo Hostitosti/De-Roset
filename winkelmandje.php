@@ -50,7 +50,11 @@ include "session.php";
             <a class="button-1" href="#">Bestel</a>
         </div>
                 
-        <div class="grid-item grid-item4">d</div>
+        <div class="grid-item grid-item4">
+            <div></div>
+            <h1>Winkelmandje</h1>
+
+        </div>
         
         <div class="grid-item grid-item5">
             <h2>Populaire smaken</h2>

@@ -12,6 +12,7 @@ include "session.php";
     <title>Bestellen</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Averia Sans Libre' rel='stylesheet'>
+    
 </head>
 <body>
     <div class="grid-container">
@@ -46,7 +47,7 @@ include "session.php";
                        <img class="" src="images/<?php echo $product['image_link']; ?>" alt="" width="" height="">
                     <?php mysqli_free_result($result);
                 }?>
-            <a class="button-1" href="#">Bestel</a>
+            <a class="button-1 addToCart" href="#">Bestel</a>
         </div>
         
         <div class="grid-item grid-item4 flex">
@@ -62,7 +63,7 @@ include "session.php";
                                 <img class="load" src="images/<?php echo $row['image_link']; ?>" alt="" width="" height="">
                                 <h2><?php echo $row['name']; ?></h2>
                                 <h2>€<?php echo $row['price_per_kg']; ?></h2>
-                                <a class="button-1" class="orderpage-link" href="">Bestel</a>
+                                <a class="button-1 addToCart" class="orderpage-link" href="" >Bestel</a>
                                 <?php if(isset($_SESSION['id'])){
                                 if($_SESSION['role'] == 'Medewerker') {?>
                                 <a href="edit_product.php?id=<?php echo $row['id']; ?>" style="color: black;">Edit product</a>
@@ -120,5 +121,6 @@ include "session.php";
         </div>
     </div>
     <script src="https://kit.fontawesome.com/05147bc226.js" crossorigin="anonymous"></script>
+    <script src="shoppingcart.js"></script>
     </body>
 </html>
