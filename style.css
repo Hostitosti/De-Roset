@@ -373,7 +373,7 @@ border-radius: 2rem;
         flex-direction: column;
     }
     .grid-item2{
-        justify-content: space-evenly;
+        justify-content: flex-start;
         margin-bottom: 10px;
     }
 
@@ -389,6 +389,16 @@ border-radius: 2rem;
     
   }
 
-  @media(max-width: 900px) {
-
+  @media(max-width: 400px) {
+    .content-grid-contact img, .content-grid-index img{
+        display: none;
+    }
+    .content-grid-index{
+        display: flex;
+        flex-direction: column;
+    }
+    .content-grid-contact{
+        display: flex;
+        flex-direction: column;
+    }
   }
