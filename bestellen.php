@@ -52,7 +52,7 @@ include "session.php";
         
         <div class="grid-item grid-item4 flex">
             <div class="orderpage-container">
-                
+<script>var products = new Array();</script>
                 <?php 
                     $sql3 = "SELECT * FROM products";
                 if ( $result = mysqli_query($conn,$sql3) )
@@ -68,11 +68,26 @@ include "session.php";
                                 if($_SESSION['role'] == 'Medewerker') {?>
                                 <a href="edit_product.php?id=<?php echo $row['id']; ?>" style="color: black;">Edit product</a>
                     <?php } 
-                    } ?>
+                    } 
+?> <script>
+    var product=
+    {
+        id: <?php echo $row['id']; ?>,
+        name: '<?php echo $row['name']; ?>',
+        price: <?php echo $row['price_per_kg']; ?>,
+        category:'<?php echo $row['category']; ?>',
+        image_link:'<?php echo $row['image_link']; ?>'
+    }
+    ;
+
+    products.push(product);
+</script>
                             </div>
                             
-              <?php } 
+              <?php }
+               
                 }
+                ?><script>window.localStorage.setItem("products", JSON.stringify(products))</script><?php
             mysqli_free_result($result); ?>
             <?php if(isset($_SESSION['id'])){
                 if($_SESSION['role'] == 'Medewerker') {?>

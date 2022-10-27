@@ -83,6 +83,7 @@ include "session.php";
             </div>
         </div>
     </div>
+    <script src="shoppingcart.js"></script>
     <script src="https://kit.fontawesome.com/05147bc226.js" crossorigin="anonymous"></script>
     </body>
 </html>
