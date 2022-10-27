@@ -52,6 +52,7 @@ body{
             transform: translate(0px);  }
 }
 
+
 .form_register div{
     margin-bottom: 10px;
 }
@@ -71,8 +72,8 @@ body{
     "e d d d d"
     "e d d d d"
     "f f f f f";
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     
 }
 
@@ -94,6 +95,7 @@ body{
     grid-area: a;
     align-items: center;
     flex-direction: column;
+    transition-duration: 0.3s;
 }
 
 
@@ -106,6 +108,7 @@ body{
     justify-content: space-between;
     background-color: #A9C4A1;
     padding: 20px;
+    
 }
 .button-1{
     margin-left: 10px;
@@ -338,3 +341,54 @@ border-radius: 2rem;
 .table td{
     padding: 10px;
 }
+
+@media(max-width: 1510px) {
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 6rem 6rem;
+        grid-auto-rows: minmax(12rem, auto);
+        grid-row-gap: 20px;
+        grid-column-gap: 50px;
+        grid-template-areas:
+        "a b b b b"
+        "a b b b b"
+        "c d d d d"
+        "e d d d d"
+        "e d d d d"
+        "e d d d d"
+        "f f f f f";
+        margin-left: 1rem;
+        margin-right: 1rem;
+        
+    }
+  }
+
+@media(max-width: 900px) {
+    .grid-item3, .grid-item5, .grid-item1 {
+      display: none;
+    }
+    .grid-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .grid-item2{
+        justify-content: space-evenly;
+        margin-bottom: 10px;
+    }
+
+    .grid-item1,.grid-item2,.grid-item3,.grid-item4,.grid-item5,.grid-item6, html{
+        font-size: 12px;
+    }
+    .content-grid-index{
+        font-size: 12px;
+    }
+    .content-grid-contact{
+        font-size: 12px;
+    }
+    
+  }
+
+  @media(max-width: 900px) {
+
+  }
