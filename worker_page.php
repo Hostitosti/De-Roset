@@ -177,7 +177,7 @@ if(isset($_SESSION['id'])){
                 <p>Castricum</p>
             </div>
             <div>
-                <p>Wij bezorgen in ...</p>
+                <p>Wij bezorgen in Haarlem, Overveen en Heemstede</p>
             </div>
             <div>
                 <a href="#">onze voorwaarden</a>
