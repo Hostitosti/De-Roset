@@ -63,7 +63,7 @@ include "session.php";
                                 <img class="load" src="images/<?php echo $row['image_link']; ?>" alt="" width="" height="">
                                 <h2><?php echo $row['name']; ?></h2>
                                 <h2>€<?php echo $row['price_per_kg']; ?></h2>
-                                <a class="button-1 addToCart" class="orderpage-link" href="" >Bestel</a>
+                                <a class="button-1 addToCart" href="winkelmandje.php?product_id=<?php echo $row['id'] ?>" class="orderpage-link">Bestel</a>
                                 <?php if(isset($_SESSION['id'])){
                                 if($_SESSION['role'] == 'Medewerker') {?>
                                 <a href="edit_product.php?id=<?php echo $row['id']; ?>" style="color: black;">Edit product</a>

@@ -406,3 +406,15 @@ border-radius: 2rem;
         flex-direction: column;
     }
   }
+
+  .winkelmandje {
+    display: flex;
+    flex-direction: column;
+  }
+  .winkelmandje form{
+    width: 50%;
+  }
+  .winkelmandje form label{
+    margin-top: 10px;
+    
+  }

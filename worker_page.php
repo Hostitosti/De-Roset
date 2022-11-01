@@ -53,7 +53,60 @@ if(isset($_SESSION['id'])){
                 
         <div class="grid-item grid-item4 flex " style="padding: 2rem;">
         <div class="load">
-
+                
+                <h2>Orders</h2>
+                <table class="table">
+                    <thead>
+                        <tr >
+                        <th scope="col">ID</th>
+                        <th scope="col">User</th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Afhaal datum</th>
+                        <th scope="col">Bezorg datum</th>
+                        <th scope="col">Is Ontvangen</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Adres</th>
+                        <th scope="col">Postcode</th>
+                        <th scope="col">Plaats</th>
+                        <th scope="col">Telefoonnummer</th>
+                        </tr>
+                    </thead>
+                    <tbody >
+                    <?php
+                $sql = "SELECT * From orders";
+                if ( $result = mysqli_query($conn,$sql) )
+                {
+                  
+                  while ($row=mysqli_fetch_assoc($result))
+                    { ?>
+                                <tr>
+                                <th scope="row"><?php echo $row['id']; ?></th>
+                                <th scope="row"><?php echo $row['user_id']; ?></th>
+                                <th scope="row"><?php echo $row['product_id']; ?></th>
+                                
+                                <td><?php echo $row['pickup']; ?></td>
+                                <td><?php echo $row['delivery']; ?></td>
+                                <td><?php if($row['isReceived'] == 0){
+                                    echo "nee";
+                                } else { echo "ja"; } ?></td>
+                                <td><?php echo $row['name']; ?></td>
+                                <td><?php echo $row['address']; ?></td>
+                                <td><?php echo $row['postalcode']; ?></td>
+                                <td><?php echo $row['place']; ?></td>
+                                <td><?php echo $row['phonenumber']; ?></td>
+                                <td><a href="delete_order.php?id=<?php echo $row['id'] ?>"  class="button-3">Annuleer</a></td>
+                                <td><a href="edit_order.php?id=<?php echo $row['id'] ?>" class="button-2">Edit</a></td>
+                                </tr>
+                                
+                                <?php }
+                    
+                    mysqli_free_result($result);
+                } ?>
+                    </tbody>
+                </table>
+            </div>
+        <div class="load">
+                
             <h2>Producten</h2>
             <table class="table">
                 <thead>

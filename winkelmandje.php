@@ -1,8 +1,65 @@
 <?php 
 require "connection.php";
-include "session.php";
+require "session.php";
+
+$product_id = isset($_GET['product_id']) ? $_GET['product_id'] : '';
+
+if(isset($_POST["submit"]) && $_POST["orderDateTime"] != "" && $product_id != "")
+{
+
+if(isset($_SESSION['id'])){ 
+$user_id = $_SESSION['id'];
+}
+else {
+    $user_id = '';
+}
 
 
+if ($_POST['typeBezorging'] == "afhalen"){
+    $isDelivery = 0;
+    $pickup = $_POST["orderDateTime"];
+    $delivery = "";
+} elseif ($_POST['typeBezorging'] == "bezorgen") {
+    $isDelivery = 1;
+    $delivery = $_POST["orderDateTime"];
+    $pickup = "";
+}
+
+if ($_POST['name'] != "" && $_POST['address'] != "" && $_POST['postalcode'] != "" && $_POST['place'] != "" && $_POST['phonenumber'] != ""){
+    $name = $_POST['name']; 
+    $address = $_POST['address']; 
+    $postalcode = $_POST['postalcode']; 
+    $place = $_POST['place'];
+    $phonenumber = $_POST['phonenumber']; 
+} elseif (isset($_SESSION['id'])){
+    $sessionID = $_SESSION['id'];
+    $result = $conn->query("SELECT * FROM users where id='$sessionID'");
+    $user = $result->fetch_assoc();
+    $name = $user['firstname'];
+    $address = $user['address']; 
+    $postalcode = $user['zipcode']; 
+    $place = $user['city'];
+    $phonenumber = $user['phonenumber']; 
+}
+else {
+    echo "<script>alert('Voer uw gegevens in')</script>";
+}
+
+
+
+$sql = "INSERT INTO orders (user_id, product_id, pickup, delivery, isDelivery, name, address, postalcode, place, phonenumber)
+VALUES ('$user_id','$product_id','$pickup','$delivery','$isDelivery','$name','$address','$postalcode','$place','$phonenumber')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+    header("location: index.php");
+    } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+    }$conn->close();
+}
+else if(isset($_POST["submit"])) {
+    echo "<script>alert('Selecteer A.U.B. een product of vul een datum in')</script>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +68,7 @@ include "session.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>blog</title>
+    <title>winkelmandje</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Averia Sans Libre' rel='stylesheet'>
 </head>
@@ -50,9 +107,38 @@ include "session.php";
             <a class="button-1" href="#">Bestel</a>
         </div>
                 
-        <div class="grid-item grid-item4">
-            <div></div>
-            <h1>Winkelmandje</h1>
+        <div class="grid-item grid-item4 winkelmandje">
+            <div>
+                <h1>Winkelmandje</h1>
+            </div>
+            <div>
+                <form action="" method="POST" class="winkelmandje">
+                    <label for="afhalen">Afhalen</label>
+                        <input type="radio" name="typeBezorging" value="afhalen" id="" checked>
+                    <label for="bezorgen">Bezorgen</label>
+                        <input type="radio" name="typeBezorging" value="bezorgen" id="">
+
+
+                    <label for="name">Naam</label>
+                        <input type="text" name="name" id="">
+                    <label for="address">Adres</label>
+                        <input type="text" name="address" id="">
+                    <label for="postalcode">postalcode</label>
+                        <input type="text" name="postalcode" id="">
+                    <label for="place">Plaats</label>
+                        <input type="text" name="place" id="">
+                    <label for="phonenumber">Telefoonnummer</label>
+                        <input type="text" name="phonenumber" id="">
+
+                    <label for="retouraddress">Retouradres hetzelfde als Afleveradres</label>
+                    <input type="checkbox" name="retouraddress" id="">
+
+                    <label for="pickup">Afhalen of Bezorging datum en tijd</label>
+                        <input type="datetime-local" name="orderDateTime" id="">
+
+                    <button type="submit" name="submit" class="button-4">Bestel</button>
+                </form>
+            </div>
 
         </div>
         
