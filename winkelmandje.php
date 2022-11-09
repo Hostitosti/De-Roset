@@ -101,7 +101,7 @@ else if(isset($_POST["submit"])) {
             $sql = "SELECT image_link, name FROM products WHERE is_flavor_of_week = 1 LIMIT 1";
             if ( $result = mysqli_query($conn,$sql) ) {
                 $product = mysqli_fetch_assoc($result); ?>
-                    <h4><?php echo $product['name']; ?></h4>
+                    <p><?php echo $product['name']; ?></p>
                        <img src="images/<?php echo $product['image_link']; ?>" alt="" width="" height="">
                     <?php mysqli_free_result($result);
                 }?>
@@ -153,7 +153,7 @@ else if(isset($_POST["submit"])) {
                     while ($row=mysqli_fetch_assoc($result))
                     { ?>
                         <img src="images/<?php echo $row['image_link']; ?>" alt="" width="" height="">
-                        <h4><?php echo $row['name']; ?></h4>
+                        <p><?php echo $row['name']; ?></p>
               <?php } 
                 }
             mysqli_free_result($result); 
