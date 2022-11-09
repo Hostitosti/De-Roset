@@ -12,6 +12,7 @@ if(isset($_SESSION['id'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="worker page">
     <title>Medewerker pagina</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Averia Sans Libre' rel='stylesheet'>
@@ -52,7 +53,7 @@ if(isset($_SESSION['id'])){
         </div>
                 
         <div class="grid-item grid-item4 flex " style="padding: 2rem;">
-        <div class="load">
+        <div class="load" >
                 
                 <h2>Orders</h2>
                 <table class="table">

@@ -68,6 +68,7 @@ else if(isset($_POST["submit"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shopping cart">
     <title>winkelmandje</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Averia Sans Libre' rel='stylesheet'>
@@ -138,6 +139,7 @@ else if(isset($_POST["submit"])) {
 
                     <button type="submit" name="submit" class="button-4">Bestel</button>
                 </form>
+                <p>(Bestellen kost tussen de 5 en 10 euro)</p>
             </div>
 
         </div>
