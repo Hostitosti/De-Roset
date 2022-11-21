@@ -43,15 +43,24 @@ if ($conn->query($sql) === TRUE) {
     <link href='https://fonts.googleapis.com/css?family=Averia Sans Libre' rel='stylesheet'>
 </head>
 <body>
-<form action="" method="post">
+<form action="" method="post" class="winkelmandje">
+    <label for="fistname">Voornaam</label>
         <input type="text" name="firstname" id="firstname" value="<?php echo $user['firstname'] ?>">
+    <label for="lastname">Achternaam</label>
         <input type="text" name="lastname" id="lastname" value="<?php echo $user['lastname'] ?>">
+    <label for="email">Email</label>
         <input type="text" name="email" id="email" value="<?php echo $user['email'] ?>">
+    <label for="password">Wachtwoord</label>
         <input type="password" name="password" id="password" value="<?php echo $user['password'] ?>">
+    <label for="date_of_birth">Geboorte datum</label>
         <input type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $user['date_of_birth'] ?>">
+    <label for="phonenumber">Telefoonnummer</label>
         <input type="text" name="phonenumber" id="phonenumber" value="<?php echo $user['phonenumber'] ?>">
+    <label for="address">Adres</label>
         <input type="text" name="address" id="address" value="<?php echo $user['address'] ?>">
+    <label for="zipcode">Zipcode</label>
         <input type="text" name="zipcode" id="zipcode" value="<?php echo $user['zipcode'] ?>">
+    <label for="city">Stad</label>
         <input type="text" name="city" id="city" value="<?php echo $user['city'] ?>">
         <input type="hidden" name="role" id="role" value="<?php echo $user['role'] ?>">
         <button type="submit" name="submit">Edit</button>

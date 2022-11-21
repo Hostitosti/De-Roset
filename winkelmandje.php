@@ -120,22 +120,15 @@ else if(isset($_POST["submit"])) {
                         <input type="radio" name="typeBezorging" value="bezorgen" id="">
 
 
-                    <label for="name">Naam</label>
-                        <input type="text" name="name" id="">
-                    <label for="address">Adres</label>
-                        <input type="text" name="address" id="">
-                    <label for="postalcode">postalcode</label>
-                        <input type="text" name="postalcode" id="">
-                    <label for="place">Plaats</label>
-                        <input type="text" name="place" id="">
-                    <label for="phonenumber">Telefoonnummer</label>
-                        <input type="text" name="phonenumber" id="">
+                    <label for="name">Naam</label><input type="text" name="name" id="">
+                    <label for="address">Adres</label><input type="text" name="address" id="">
+                    <label for="postalcode">postalcode</label><input type="text" name="postalcode" id="">
+                    <label for="place">Plaats</label><input type="text" name="place" id="">
+                    <label for="phonenumber">Telefoonnummer</label><input type="text" name="phonenumber" id="">
 
-                    <label for="retouraddress">Retouradres hetzelfde als Afleveradres</label>
-                    <input type="checkbox" name="retouraddress" id="">
+                    <label for="retouraddress">Retouradres hetzelfde als Afleveradres</label><input type="checkbox" name="retouraddress" id="">
 
-                    <label for="pickup">Afhalen of Bezorging datum en tijd</label>
-                        <input type="datetime-local" name="orderDateTime" id="">
+                    <label for="pickup">Afhalen of Bezorging datum en tijd</label><input type="datetime-local" name="orderDateTime" id="">
 
                     <button type="submit" name="submit" class="button-4">Bestel</button>
                 </form>
